@@ -11,7 +11,7 @@ export default function Body({ headerBackground }) {
   useEffect(() => {
     const getInitialPlaylist = async () => {
       const response = await axios.get(
-        `https://api.spotify.com/v1/playlists/${selectedPlaylistId}`,
+        `https://api.spotify.com/v1/me/playlists/${selectedPlaylistId}`,
         {
           headers: {
             Authorization: "Bearer " + token,
