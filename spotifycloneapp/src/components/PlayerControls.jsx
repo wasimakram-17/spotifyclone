@@ -13,7 +13,7 @@ import { reducerCases } from "../utils/Constants";
 export default function PlayerControls() {
   const [{ token, playerState }, dispatch] = useStateProvider();
 
-  const changeState = async () => {
+  const changeTrack = async () => {
     const state = playerState ? "pause" : "play";
     await axios.put(
       `https://api.spotify.com/v1/me/player/${state}`,
